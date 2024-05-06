@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
-import json
+import json # load json
 
-# Open json file and load data
+# open json file and load data
 with open('data/schacon.repos.json', 'r') as file:
     repos = json.load(file)
 
-# Open csv file
+# open csv file called chacon.csv
 with open('chacon.csv', 'w') as csv_file:
     for repo in repos[:5]: # first 5
         name = repo['name']
